@@ -1,21 +1,22 @@
 # LEARNING NOTE: reconstructed buggy first
 # attempt, not working code.
 
-# Bug: inverted operators (< instead of >)
-# and uncovered ties.
+# Fixed inverted operators (< -> >). and
+# Known issue: ties are still uncovered,
+# e.g. largest(5, 5, 3) returns None.
 
 def largest(a,b,c):
   #use comparison operators
-  if a <  b:
+  if a >  b:
 
   # to compare between arguments
-    if c < a:
+    if c > a:
      return c
     else :
        return a
-  elif b < a:
+  elif b > a:
 
-    if c < b:
+    if c > b:
 
       return c
     else:
